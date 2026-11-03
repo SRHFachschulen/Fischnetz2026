@@ -16,6 +16,7 @@ public class PlayerMovement : NetworkBehaviour
     public void OnMove(InputValue value)
     {
         _currentMovementInput = value.Get<Vector2>();
+        Debug.Log("Movement input received: " + _currentMovementInput);
     }
 
     public void Update()

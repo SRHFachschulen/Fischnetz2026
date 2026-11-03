@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: -8802231174488629165}
   - component: {fileID: -5873419910925939157}
   - component: {fileID: 4069497629733601406}
+  - component: {fileID: 1524608909076588798}
+  - component: {fileID: -7211132097796107549}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -72,7 +74,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: aaece9c95d51af4418c66d8d90f08d85, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,6 +168,9 @@ MonoBehaviour:
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
   - {fileID: 6091744293460595328}
+  - {fileID: -8802231174488629165}
+  - {fileID: 4069497629733601406}
+  - {fileID: 1524608909076588798}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
@@ -176,7 +181,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _preventDespawnOnDisconnect: 0
   _defaultDespawnType: 0
-  _initializedTimestamp: -8584095521369957969
+  _initializedTimestamp: -8584079112941520496
 --- !u!114 &6091744293460595328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,9 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2368d6459e52aa4bb4e9d14688f1737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _componentIndexCache: 255
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 5271327104735182810}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 5271327104735182810}
   MoveSpeed: 5
 --- !u!114 &-5873419910925939157
 MonoBehaviour:
@@ -250,9 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FishNet.Runtime::FishNet.Component.Transforming.NetworkTransform
-  _componentIndexCache: 255
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 5271327104735182810}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 5271327104735182810}
   _componentConfiguration: 0
   _synchronizeParent: 0
   _packing:
@@ -284,3 +289,46 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
+--- !u!114 &1524608909076588798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266012116322255150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d11c8ecddf1df84b8aa58d428513273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCubeSpawner
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 5271327104735182810}
+  _networkObjectCache: {fileID: 5271327104735182810}
+  CubePrefab: {fileID: 2875977988770231309, guid: e306e982b4d14284b8361f3d1cfabc74, type: 3}
+--- !u!54 &-7211132097796107549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266012116322255150}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
