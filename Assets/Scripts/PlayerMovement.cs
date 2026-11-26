@@ -16,7 +16,7 @@ public class PlayerMovement : NetworkBehaviour
     public void OnMove(InputValue value)
     {
         _currentMovementInput = value.Get<Vector2>();
-        Debug.Log("Movement input received: " + _currentMovementInput);
+        //Debug.Log("Movement input received: " + _currentMovementInput);
     }
 
     public void Update()
@@ -30,6 +30,11 @@ public class PlayerMovement : NetworkBehaviour
         if (moveDirection.sqrMagnitude > 1f)
             moveDirection.Normalize();
 
+        float cameraRotation = Camera.main.transform.rotation.eulerAngles.y;
+        moveDirection = Quaternion.Euler(0, cameraRotation, 0) * moveDirection;
+        
+        
+        
         transform.position += MoveSpeed * Time.deltaTime * moveDirection;
     }
 }
