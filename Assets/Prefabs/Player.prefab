@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 7027120480939381009}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   - {fileID: -8802231174488629165}
   - {fileID: 4069497629733601406}
   - {fileID: 1524608909076588798}
+  - {fileID: 7027120480939381009}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
@@ -183,7 +184,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _preventDespawnOnDisconnect: 0
   _defaultDespawnType: 0
-  _initializedTimestamp: -8584079112941520496
+  _initializedTimestamp: -8584059100554395796
 --- !u!114 &6091744293460595328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,9 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de76f84b264ddd41bd9fb93e7452311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _componentIndexCache: 255
+  _componentIndexCache: 4
   _addedNetworkObject: {fileID: 5271327104735182810}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 5271327104735182810}
   _cameraPrefab: {fileID: 2438735291545066114, guid: 845373c20546bd249b9a00a3b7a5dc71, type: 3}
   _cameraHolder: {fileID: 2932868074023933992}
 --- !u!1 &7880772891547363359
